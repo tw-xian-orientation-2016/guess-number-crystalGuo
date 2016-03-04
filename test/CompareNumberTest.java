@@ -2,6 +2,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class CompareNumberTest {
 
@@ -29,5 +31,4 @@ public class CompareNumberTest {
         String result = compareNumber.compareNumber("1234", "4321");
         assertEquals("0A4B", result);
     }
-
 }
