@@ -15,6 +15,16 @@ public class AnswerGeneratorTest {
         when(random.nextInt(10)).thenReturn(1, 2, 3, 4);
         AnswerGenerator answerGenerator = new AnswerGenerator(random);
 
-        assertThat(answerGenerator.generateNumber(),is("1234"));
+        assertThat(answerGenerator.generate(),is("1234"));
     }
+
+    @Test
+    public void should_return_no_duplicate_four_digit_String() {
+        Random random = mock(Random.class);
+        when(random.nextInt(10)).thenReturn(1, 2, 2, 3, 4);
+        AnswerGenerator answerGenerator = new AnswerGenerator(random);
+
+        assertThat(answerGenerator.generate(),is("1234"));
+    }
+
 }
