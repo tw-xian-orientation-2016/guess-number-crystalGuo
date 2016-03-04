@@ -1,4 +1,4 @@
-public class NumberComparing {
+public class CompareNumber {
 
     public String compareNumber(String input, String result) {
         int A = 0;
