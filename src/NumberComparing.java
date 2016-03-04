@@ -5,9 +5,10 @@ public class NumberComparing {
         int countB = 0;
 
         for(int i = 0; i < input.length(); i++) {
-            char digit = input.charAt(i);
-            if(result.indexOf(digit) == -1) {
-                break;
+            if(input.charAt(i) == result.charAt(i)) {
+                countA ++;
+            } else if(result.contains(String.valueOf(input.charAt(i)))) {
+
             }
         }
 
