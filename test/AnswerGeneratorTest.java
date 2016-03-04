@@ -10,9 +10,7 @@ import static org.mockito.Mockito.when;
 public class AnswerGeneratorTest {
 
     @Test
-    public void should_return_fout_digits_String() {
-        AnswerGenerator answerGenerator = new AnswerGenerator();
-
+    public void should_return_four_digits_String() {
         Random random = mock(Random.class);
         when(random.nextInt(10)).thenReturn(1, 2, 3, 4);
         answerGenerator.setRandom(random);
