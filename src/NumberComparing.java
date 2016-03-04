@@ -8,7 +8,7 @@ public class NumberComparing {
             if(input.charAt(i) == result.charAt(i)) {
                 A ++;
             } else if(result.contains(String.valueOf(input.charAt(i)))) {
-
+                B++;
             }
         }
 
