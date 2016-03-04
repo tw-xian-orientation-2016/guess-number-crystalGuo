@@ -13,7 +13,7 @@ public class AnswerGeneratorTest {
     public void should_return_four_digits_String() {
         Random random = mock(Random.class);
         when(random.nextInt(10)).thenReturn(1, 2, 3, 4);
-        answerGenerator.setRandom(random);
+        AnswerGenerator answerGenerator = new AnswerGenerator(random);
 
         assertThat(answerGenerator.generateNumber(),is("1234"));
     }
